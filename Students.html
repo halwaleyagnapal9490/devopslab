@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Management System</title>
+</head>
+<body>
+<h1>Employee Management System</h1>
+<div class="container">
+    <h2>Add Employee</h2>
+    <input type="text" id="name" placeholder="Employee Name">
+    <input type="text" id="id" placeholder="Employee ID">
+    <input type="text" id="department" placeholder="Department">
+    <button onclick="addEmployee()">Add Employee</button>
+    <h3>Employee Details</h3>
+    <p id="result"></p>
+</div>
+<script>
+function addEmployee() {
+    var name = document.getElementById("name").value;
+    var id = document.getElementById("id").value;
+    var department = document.getElementById("department").value;
+
+    if (name == "" || id == "" || department == "") {
+        alert("Please fill all details");
+    }
+    else {
+        document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "ID: " + id + "<br>" +
+        "Department: " + department;
+    }
+}
+</script>
+</body>
+</html>
